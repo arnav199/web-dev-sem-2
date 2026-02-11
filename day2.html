@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+</head>
+
+<body>
+
+    <!-- <input type="text" id="name" placeholder="Enter the name">
+    <button class="bnt">Add Students</button>
+    <div class="list "></div> -->
+    <script>
+    // const timer=setInterval(()=>{
+    //     console.log("After 3 sec");},1000)
+    //     console.log(timerId)
+    //     setTimeout(()=>{
+    //         clearInterval(timer);
+    //     },10*1000)
+       
+
+// let count=1
+// const timerId=setInterval(()=>{
+//     if(count===10)clearInterval(timerId);
+//     console.log(count)
+//     count+=1
+// },1000)
+
+
+// const name=document.querySelector('#name');
+// const bnt=document.querySelector('.bnt');
+// const list=document.querySelector('.list');
+
+// btn.addEventListener('click',()=>{
+//     //creating element
+//     const li=document.createElement('li');
+//     const dlt=document.createElement('button');
+
+//     //providing text
+//     dlt.innerText='Delete';
+//     li.innerText=name.value;
+
+//     //appenting the element
+//     li.appendChild(dlt);
+//     list.appendChild(li);
+
+//     //clearing text 
+//     name.value="";
+// })
+
+// function greet(callback){
+//     setTimeout(()=>{
+//     console.log("Helow Students")
+//     callback(45)},2000)
+    
+// }
+
+
+// function print(sample, num){
+//     sample()
+//     console.log("total students are",num)
+// }
+
+// //print(greet,45)
+// greet(print)
+
+
+// console.log("Starting Homework......")
+
+// setTimeout(() => {
+//     console.log("Homework Done!");
+//     console.log("Starting Dinner...");
+
+//     setTimeout(() => {
+//         console.log("Dinner Done!");
+//         console.log("Getting ready To Go Out.....");
+    
+
+
+//        setTimeout(() => {
+//         console.log("Going To Playground!");
+//        },1000)
+
+//     },1500)
+
+// },2000)
+
+
+// function finishhomework(callback) {
+//     console.log("Starting homework...");
+//     setTImeout(()=>{
+//         console.log("Homework done!");
+//         callback();
+//     } ,2000);
+// }
+
+// function eatDinner(calllback){
+//     console.log("Starting Dinner....")
+//     setTimeout(()=>{
+//         console.log("Dinner Done!")
+//     },1500);
+// }
+
+
+// function goToplayground(){
+//     console.log("Going to the Playgroung");
+// }
+// finishhomework(()=>{
+// eatDinner(()=>{
+// goToplayground();
+// });
+// });
+
+// const p=new Promise((resolve,reject)=>{
+//     let done=true;
+//    setTimeout(()=>{
+//     if(done){
+//         resolve("Promise is resolved successfully");
+//     }else{
+//         reject("Promise is rejected");
+//     }
+//    },5000)  
+// });    
+
+
+
+// p.then((msg)=>{
+//     console.log(msg);
+// }).catch((err)=>{
+//     console.log(err)
+
+function dohomework(){
+    const p=new Promise((res,rej)=>{
+        setTimeout(() => {
+        let done=true;
+        if(done){
+            
+        console.log("Home work is done")
+        res("Homework Completed")
+        }else{
+            rej("Homework not done")
+        }
+
+    },2000);
+    });
+    return p;
+}
+function eatDinner(){
+    const p=new Promise((res,rej)=>{
+        setTimeout(() => {
+        let done=true;
+        if(done){
+            
+        console.log("Dinner is done")
+        res("Dinner Completed")
+        }else{
+            rej("Dinner not done")
+        }
+
+    },1500);
+    });
+    return p;
+}
+
+
+function goToplayground(){
+    const p=new Promise((res,rej)=>{
+        setTimeout(()=>{
+            let done=true
+            if(done){
+                console.log("Went to playground")
+                res("Playgound Time")
+            }else{
+                rej("Not Allowed")
+            }
+        },2000)
+    })
+    return p
+}
+
+dohomework().then((msg)=>{
+    console.log(msg)
+    return eatDinner()
+}).then((msg)=>{
+    console.log(msg)
+    return goToplayground()
+}).then((msg)=>{
+    console.log(msg)
+    return goToplayground()
+}).then((msg)=>{
+    console.log(msg)
+}).catch((err)=>{
+    console.log(err)
+}).finally(()=>{
+    console.log("Go To Sleep")
+})
+
+     </script>
+
+     </body>
+</html>
+<!-- git pull try-->
