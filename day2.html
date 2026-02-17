@@ -8,9 +8,9 @@
 
 <body>
 
-    <!-- <input type="text" id="name" placeholder="Enter the name">
+    <input type="text" id="name" placeholder="Enter the name">
     <button class="bnt">Add Students</button>
-    <div class="list "></div> -->
+    <div class="list "></div> 
     <script>
     // const timer=setInterval(()=>{
     //     console.log("After 3 sec");},1000)
@@ -130,74 +130,158 @@
 // }).catch((err)=>{
 //     console.log(err)
 
-function dohomework(){
-    const p=new Promise((res,rej)=>{
-        setTimeout(() => {
-        let done=true;
-        if(done){
+// function dohomework(){
+//     const p=new Promise((res,rej)=>{
+//         setTimeout(() => {
+//         let done=true;
+//         if(done){
             
-        console.log("Home work is done")
-        res("Homework Completed")
-        }else{
-            rej("Homework not done")
-        }
+//         console.log("Home work is done")
+//         res("Homework Completed")
+//         }else{
+//             rej("Homework not done")
+//         }
 
-    },2000);
-    });
-    return p;
-}
-function eatDinner(){
-    const p=new Promise((res,rej)=>{
-        setTimeout(() => {
-        let done=true;
-        if(done){
+//     },2000);
+//     });
+//     return p;
+// }
+// function eatDinner(){
+//     const p=new Promise((res,rej)=>{
+//         setTimeout(() => {
+//         let done=true;
+//         if(done){
             
-        console.log("Dinner is done")
-        res("Dinner Completed")
-        }else{
-            rej("Dinner not done")
-        }
+//         console.log("Dinner is done")
+//         res("Dinner Completed")
+//         }else{
+//             rej("Dinner not done")
+//         }
 
-    },1500);
-    });
-    return p;
+//     },1500);
+//     });
+//     return p;
+// }
+
+
+// function goToplayground(){
+//     const p=new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             let done=true
+//             if(done){
+//                 console.log("Went to playground")
+//                 res("Playgound Time")
+//             }else{
+//                 rej("Not Allowed")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// dohomework().then((msg)=>{
+//     console.log(msg)
+//     return eatDinner()
+// }).then((msg)=>{
+//     console.log(msg)
+//     return goToplayground()
+// }).then((msg)=>{
+//     console.log(msg)
+//     return goToplayground()
+// }).then((msg)=>{
+//     console.log(msg)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("Go To Sleep")
+// })
+
+// ----------async/await----------\\
+
+// function orderfood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//             let done=true;
+//             if(done){
+//                 console.log("Food is ordered")
+//                 res("Order Placed")
+//             }else{
+//                 rej("Order Failed")
+//             }
+//         },2000);
+//     })
+// }
+// orderfood().then((data)=>{
+//     return preparefood();
+// }).then((data)=>{
+//         return new Promise((res,rej)=>{
+//             setTimeout(() => {
+//                 let done=true;
+//                 if(done){
+//                     console.log("Food is prepared")
+//                     res("Food is ready")
+//                 }else{
+//                     rej("Failed to prepare food")
+//                 }
+//             },2000);
+//         })
+//     })
+
+
+//     preparefood().then((data)=>{
+//     return fooddeliverd();
+// }).then((data)=>{
+//         return new Promise((res,rej)=>{
+//             setTimeout(() => {
+//                 let done=true;
+//                 if(done){
+//                     console.log("Food is Deliverd")
+//                     res("Food is ready")
+//                 }else{
+//                     rej("Failed to prepare Deliverd")
+//                 }
+//             },2000);
+//         })
+//     })
+
+// async function order(){
+//     await orderfood()
+//     await preparefood()
+//     await fooddeliverd()
+// }
+
+// orderfood()
+
+
+// orderfood().then((data)=>{
+//     return preparefood()
+// }).then((data)=>{
+//     return fooddeliverd()
+// }).then((data)=>{
+// }).catch((err)=>{
+//     console.log("Something went wrong:", err)
+// })
+
+// console.log("First line")
+// try{
+//     console.log(sample)
+//     console.log("Function Chal Gayi!!!!!")
+// }catch(e){
+//     console.log(e)
+// }
+// console.log("Khatam Tata Bye Bye")
+
+try{
+let age=16
+if (age<18){
+    throw new Error("Bache hai vote nahi de sakta")
 }
-
-
-function goToplayground(){
-    const p=new Promise((res,rej)=>{
-        setTimeout(()=>{
-            let done=true
-            if(done){
-                console.log("Went to playground")
-                res("Playgound Time")
-            }else{
-                rej("Not Allowed")
-            }
-        },2000)
-    })
-    return p
+}catch(e){
+    console.warn(e)
 }
-
-dohomework().then((msg)=>{
-    console.log(msg)
-    return eatDinner()
-}).then((msg)=>{
-    console.log(msg)
-    return goToplayground()
-}).then((msg)=>{
-    console.log(msg)
-    return goToplayground()
-}).then((msg)=>{
-    console.log(msg)
-}).catch((err)=>{
-    console.log(err)
-}).finally(()=>{
-    console.log("Go To Sleep")
-})
+console.log("Khatam Tata Bye Bye Gaya")
 
      </script>
 
      </body>
 </html>
-<!-- git pull try-->
