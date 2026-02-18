@@ -6,7 +6,7 @@
     <title>Day 2</title>
 </head>
 
-<body>
+<body style="background-color: black;">
 
     <input type="text" id="name" placeholder="Enter the name">
     <button class="bnt">Add Students</button>
@@ -281,11 +281,47 @@
 // }
 // console.log("Khatam Tata Bye Bye Gaya")
 
-async function getdata(){
-    const response=await fetch("https://dummyjason.com/products")
-    const data=await response.jason()
-    data.product.foreach
-}
+
+// async function sendData(){
+//     const response=await fetch("https://dummyjson.com/products/add", {
+//         method:"POST",
+//         headers:{
+//             "Content-Type":"application/json"
+//         },
+//         body:JSON.stringify({
+//             title:"BMW Hoddi",
+//             description:"Exclucive BMW Hoddi for Men",
+//             price:5499,
+//             discountPercentage:12.96,
+//             rating:4.69,
+//             stock:10,
+//             brand:"Addidas",
+//             category:"Clothes"
+//         })
+//     });
+// }
+
+
+// localStorage.setItem("name","Toxic")
+// localStorage.setItem("age",18)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+
+
+// localStorage.removeItem("name")
+// console.log(localStorage.getItem("name")) //outpurt: null
+//-------------------session storage------------------\\
+// data stored in session storage will be cleared when the page session ends, which typically happens when the browser tab is closed. It is designed for temporary storage of data that is relevant only for the duration of a single browsing session.\\
+
+// sessionStorage.setItem("name","Toxic")
+// sessionStorage.setItem("age",18)
+
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+
+
      </script>
 
      </body>
