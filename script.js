@@ -303,9 +303,12 @@
 // localStorage.setItem("name","Toxic")
 // localStorage.setItem("age",18)
 
+
+//-------------------local storage------------------\\
+// data stored in local storage will persist even after the browser is closed and reopened. It is designed for long-term storage of data that needs to be retained across sessions. Local storage allows you to store key-value pairs in a web browser, and the data remains available until it is explicitly cleared by the user or through code.\\
+
 // console.log(localStorage.getItem("name"))
 // console.log(localStorage.getItem("age"))
-
 
 // localStorage.removeItem("name")
 // console.log(localStorage.getItem("name")) //outpurt: null
@@ -318,4 +321,51 @@
 
 // console.log(sessionStorage.getItem("name"))
 // console.log(sessionStorage.getItem("age"))
+
+
+// document.cookie="name=Toxic; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/"
+// document.cookie="age=18; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/"
+
+//-----------------------cookies------------------\\
+// Cookies are small pieces of data that are stored on the user's computer by the web browser. They are typically used to store information about the user or their preferences, and they can be accessed by both the client-side JavaScript and the server. Cookies have an expiration date, and they can be set to persist for a specific duration or until they are manually deleted by the user. Cookies are often used for session management, personalization, and tracking user behavior on websites.\\
+
+//-------------------------generator function------------------\\
+
+//function* generator(){
+    // yield "Hello"
+    // yield "World"
+    // yield "Welcome to JavaScript"
+
+
+// let index=2501730045
+// while(true){
+//     yield index
+//     index++}
+// }
+// const gen=generator();
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+
+//--------------------------curring------------------\\
+
+// function add(a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
+// }
+
+// const first=add(5)
+// console.log(first) 
+// const second=first(10)
+// console.log(second)
+// console.log(second(15)) 
+
+// console.log(add(5)(10)(15))
+
+
 
