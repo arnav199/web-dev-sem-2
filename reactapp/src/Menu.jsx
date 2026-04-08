@@ -1,5 +1,6 @@
 import React ,{Component}from 'react'
 import { add as addition } from './utility'
+import './css/Menu.css'
 // function Menu() {
 //     console.log(addition(3,4))
 //   return (
@@ -66,8 +67,7 @@ class Menu extends Component {
                     <li>World</li>
                 </ul>
                 <h2>{this.state.count}</h2>
-                <button style={{ backgroundColor: 'blue', color: 'white', width: '100px', height: '40px'}}
-                 onClick={this.handleIncrement}>Increment</button>
+                <button className="btn" onClick={this.handleIncrement}>Increment</button>
             </div>
         )
     }
