@@ -7,7 +7,11 @@ function Contact() {
 
     const handleSubmit=()=>{
         event.preventDefault()
-        console.log(name)
+       if(!email.endsWith("krmu.edu.in")) {
+            alert("Please enter a valid email address")
+            return
+            
+        }
         console.log(email)
         console.log(message)
     }
